@@ -917,20 +917,14 @@ System::Void MyForm::generate_files_button_Click(System::Object^  sender, System
 	ofs.close();
 
 	const char* months[] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
-
-	//Get the current system date time
 	SYSTEMTIME st;
 	GetSystemTime(&st);
 
-	//Construct the string in the format "21:5 Jan 23, 11"
 	ostringstream ss;
 	ss << st.wHour << "-" << st.wMinute << "-" << st.wSecond << "-" << st.wMilliseconds <<
 		"-" << months[st.wMonth - 1] <<
 		"-" << st.wDay << "-" << st.wYear % 1000;
-
-	//Extract the string from the stream
 	string date_time = ss.str();
-	//date_time.insert('p', 0);
 	_mkdir(date_time.c_str());
 
 	String^ date_time_String = gcnew String(date_time.c_str());
