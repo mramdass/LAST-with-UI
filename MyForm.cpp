@@ -45,6 +45,11 @@ System::Void MyForm::known1_pd_CheckedChanged(System::Object^  sender, System::E
 
 System::Void MyForm::contributors_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 	if (contributors->Text == "4") {
+		known4_pd->Enabled = true;
+		known4_pd->Enabled = true;
+		known4_pd->Enabled = true;
+		known4_pd->Enabled = true;
+
 		d8_2->Enabled = true; d8_3->Enabled = true; d8_4->Enabled = true;
 		d21_2->Enabled = true; d21_3->Enabled = true; d21_4->Enabled = true;
 		d7_2->Enabled = true; d7_3->Enabled = true; d7_4->Enabled = true;
@@ -62,6 +67,11 @@ System::Void MyForm::contributors_TextChanged(System::Object^  sender, System::E
 		fga_2->Enabled = true; fga_3->Enabled = true; fga_4->Enabled = true;
 	}
 	else if (contributors->Text == "3") {
+		known1_pd->Enabled = true;
+		known2_pd->Enabled = true;
+		known3_pd->Enabled = true;
+		known4_pd->Enabled = false;
+
 		d8_2->Enabled = true; d8_3->Enabled = true; d8_4->Enabled = false;
 		d21_2->Enabled = true; d21_3->Enabled = true; d21_4->Enabled = false;
 		d7_2->Enabled = true; d7_3->Enabled = true; d7_4->Enabled = false;
@@ -95,6 +105,11 @@ System::Void MyForm::contributors_TextChanged(System::Object^  sender, System::E
 		fga_4->Text = "";
 	}
 	else if (contributors->Text == "2") {
+		known1_pd->Enabled = true;
+		known2_pd->Enabled = true;
+		known3_pd->Enabled = false;
+		known4_pd->Enabled = false;
+
 		d8_2->Enabled = true; d8_3->Enabled = false; d8_4->Enabled = false;
 		d21_2->Enabled = true; d21_3->Enabled = false; d21_4->Enabled = false;
 		d7_2->Enabled = true; d7_3->Enabled = false; d7_4->Enabled = false;
@@ -128,6 +143,13 @@ System::Void MyForm::contributors_TextChanged(System::Object^  sender, System::E
 		fga_3->Text = ""; fga_4->Text = "";
 	}
 	else if (contributors->Text == "1") {
+		deducible->Checked = true;
+
+		known1_pd->Enabled = true;
+		known2_pd->Enabled = false;
+		known3_pd->Enabled = false;
+		known4_pd->Enabled = false;
+
 		d8_2->Enabled = false; d8_3->Enabled = false; d8_4->Enabled = false;
 		d21_2->Enabled = false; d21_3->Enabled = false; d21_4->Enabled = false;
 		d7_2->Enabled = false; d7_3->Enabled = false; d7_4->Enabled = false;
