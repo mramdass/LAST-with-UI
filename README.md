@@ -1,7 +1,7 @@
 # LAST-with-UI
 This tool is meant to be used to generate evidence files for LAST
 
-Legal Aid Statistical Tool (C) 2015 Munieshwar Ramdass
+LAST (C) 2015 Munieshwar Ramdass
 	
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
